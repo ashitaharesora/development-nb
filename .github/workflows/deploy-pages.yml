@@ -26,6 +26,14 @@ jobs:
         run: |
           mkdir -p assets/data
 
+          if [ -z "${{ vars.MICROCMS_SERVICE_ID }}" ] || [ -z "${{ secrets.MICROCMS_API_KEY }}" ]; then
+            echo "microCMS variables not configured. Skipping fetch."
+            echo '{"contents":[]}' > assets/data/blog.json
+            echo '{"contents":[]}' > assets/data/category.json
+            echo '{"contents":[]}' > assets/data/news.json
+            exit 0
+          fi
+
           curl --fail-with-body --silent --show-error \
             "https://${{ vars.MICROCMS_SERVICE_ID }}.microcms.io/api/v1/${{ vars.MICROCMS_ENDPOINT_BLOGS }}?limit=100" \
             -H "X-MICROCMS-API-KEY: ${{ secrets.MICROCMS_API_KEY }}" \
