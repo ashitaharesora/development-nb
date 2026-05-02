@@ -168,7 +168,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)), url('../img/photo1.jpg') center/cover no-repeat
+  background: linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)), linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)), url('../img/photo1.jpg') center/cover no-repeat
 }
 
 .hero::after {
@@ -189,12 +189,13 @@ main {
 .hero-kicker {
   display: inline-flex;
   padding: 7px 14px;
-  border: 1px solid rgba(255, 255, 255, .38);
+  border: 1px solid rgba(255, 255, 255, .50);
   border-radius: 999px;
-  background: rgba(255, 255, 255, .08);
+  background: rgba(0, 0, 0, .18);
   font-size: 13px;
   letter-spacing: .08em;
-  margin-bottom: 16px
+  margin-bottom: 16px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .40)
 }
 
 .hero h1 {
@@ -204,14 +205,15 @@ main {
   line-height: 1.32;
   margin: 0 0 20px;
   max-width: 900px;
-  text-shadow: 0 6px 24px rgba(0, 0, 0, .18)
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55), 0 6px 28px rgba(0, 0, 0, .35)
 }
 
 .hero p {
   margin: 0;
   font-size: 17px;
   max-width: 850px;
-  color: rgba(255, 255, 255, .92)
+  color: rgba(255, 255, 255, .95);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .45)
 }
 
 .hero-actions {
@@ -840,6 +842,7 @@ main {
 
 .home-page .hero::before {
   background:
+    linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)),
     linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
     url('../img/photo1.jpg') center center / cover no-repeat;
 }
@@ -869,6 +872,7 @@ main {
 
   .home-page .hero::before {
     background:
+      linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)),
       linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
       url('../img/photo1.jpg') 78% center / cover no-repeat;
   }
