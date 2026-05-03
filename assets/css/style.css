@@ -168,7 +168,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)), linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)), url('../img/photo1.jpg') center/cover no-repeat
+  background: linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)), url('../img/photo1.jpg') center/cover no-repeat
 }
 
 .hero::after {
@@ -189,13 +189,12 @@ main {
 .hero-kicker {
   display: inline-flex;
   padding: 7px 14px;
-  border: 1px solid rgba(255, 255, 255, .50);
+  border: 1px solid rgba(255, 255, 255, .38);
   border-radius: 999px;
-  background: rgba(0, 0, 0, .18);
+  background: rgba(255, 255, 255, .08);
   font-size: 13px;
   letter-spacing: .08em;
-  margin-bottom: 16px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, .40)
+  margin-bottom: 16px
 }
 
 .hero h1 {
@@ -205,15 +204,34 @@ main {
   line-height: 1.32;
   margin: 0 0 20px;
   max-width: 900px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .55), 0 6px 28px rgba(0, 0, 0, .35)
+  -webkit-text-stroke: 1px rgba(0, 0, 0, .55);
+  text-stroke: 1px rgba(0, 0, 0, .55);
+  text-shadow:
+    1px  1px 0 rgba(0, 0, 0, .45),
+   -1px -1px 0 rgba(0, 0, 0, .45),
+    1px -1px 0 rgba(0, 0, 0, .45),
+   -1px  1px 0 rgba(0, 0, 0, .45)
+}
+
+/* #005183スパン（「創業支援」）はストロークを除外 */
+.hero h1 span {
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  text-shadow: none
 }
 
 .hero p {
   margin: 0;
   font-size: 17px;
   max-width: 850px;
-  color: rgba(255, 255, 255, .95);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, .45)
+  color: rgba(255, 255, 255, .92);
+  -webkit-text-stroke: 0.6px rgba(0, 0, 0, .50);
+  text-stroke: 0.6px rgba(0, 0, 0, .50);
+  text-shadow:
+    1px  1px 0 rgba(0, 0, 0, .35),
+   -1px -1px 0 rgba(0, 0, 0, .35),
+    1px -1px 0 rgba(0, 0, 0, .35),
+   -1px  1px 0 rgba(0, 0, 0, .35)
 }
 
 .hero-actions {
@@ -842,7 +860,6 @@ main {
 
 .home-page .hero::before {
   background:
-    linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)),
     linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
     url('../img/photo1.jpg') center center / cover no-repeat;
 }
@@ -872,7 +889,6 @@ main {
 
   .home-page .hero::before {
     background:
-      linear-gradient(rgba(0, 0, 0, .28), rgba(0, 0, 0, .28)),
       linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
       url('../img/photo1.jpg') 78% center / cover no-repeat;
   }
