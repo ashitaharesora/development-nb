@@ -14,7 +14,7 @@
   --accent-strong: #9cc7eb;
   --card: #ffffff;
   --hero: #003a60;
-  --hero-overlay: rgba(0, 50, 80, .40);
+  --hero-overlay: rgba(0, 30, 60, .20);
   --max: 1100px;
   --shadow: 0 2px 12px rgba(0, 81, 131, .06);
 
@@ -168,7 +168,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)), url('../img/photo1.jpg') center/cover no-repeat
+  background: linear-gradient(115deg, var(--hero-overlay), rgba(0, 30, 60, .15) 45%, rgba(0, 30, 60, .08)), url('../img/photo1.jpg') center/cover no-repeat
 }
 
 .hero::after {
@@ -204,20 +204,7 @@ main {
   line-height: 1.32;
   margin: 0 0 20px;
   max-width: 900px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, .55);
-  text-stroke: 1px rgba(0, 0, 0, .55);
-  text-shadow:
-    1px  1px 0 rgba(0, 0, 0, .45),
-   -1px -1px 0 rgba(0, 0, 0, .45),
-    1px -1px 0 rgba(0, 0, 0, .45),
-   -1px  1px 0 rgba(0, 0, 0, .45)
-}
-
-/* #005183スパン（「創業支援」）はストロークを除外 */
-.hero h1 span {
-  -webkit-text-stroke: 0;
-  text-stroke: 0;
-  text-shadow: none
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .35), 0 1px 4px rgba(0, 0, 0, .20)
 }
 
 .hero p {
@@ -225,13 +212,7 @@ main {
   font-size: 17px;
   max-width: 850px;
   color: rgba(255, 255, 255, .92);
-  -webkit-text-stroke: 0.6px rgba(0, 0, 0, .50);
-  text-stroke: 0.6px rgba(0, 0, 0, .50);
-  text-shadow:
-    1px  1px 0 rgba(0, 0, 0, .35),
-   -1px -1px 0 rgba(0, 0, 0, .35),
-    1px -1px 0 rgba(0, 0, 0, .35),
-   -1px  1px 0 rgba(0, 0, 0, .35)
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .30)
 }
 
 .hero-actions {
@@ -860,7 +841,7 @@ main {
 
 .home-page .hero::before {
   background:
-    linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
+    linear-gradient(115deg, var(--hero-overlay), rgba(0, 30, 60, .15) 45%, rgba(0, 30, 60, .08)),
     url('../img/photo1.jpg') center center / cover no-repeat;
 }
 
@@ -889,7 +870,7 @@ main {
 
   .home-page .hero::before {
     background:
-      linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .30) 45%, rgba(0, 50, 80, .18)),
+      linear-gradient(115deg, var(--hero-overlay), rgba(0, 30, 60, .15) 45%, rgba(0, 30, 60, .08)),
       url('../img/photo1.jpg') 78% center / cover no-repeat;
   }
 
