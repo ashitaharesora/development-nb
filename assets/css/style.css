@@ -220,7 +220,7 @@ main {
 .hero h1 {
   font-family: 'はれのそら明朝', "Yu Mincho", "Hiragino Mincho ProN", serif;
   font-weight: 400;
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: 25px;
   margin: 0 0 20px;
   max-width: 900px;
   text-shadow: 0 2px 16px rgba(0, 0, 0, .35), 0 1px 4px rgba(0, 0, 0, .20)
